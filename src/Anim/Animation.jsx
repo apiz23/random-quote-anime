@@ -21,3 +21,8 @@ export const scaleUp = {
 	hidden: { scale: 0 },
 	visible: { scale: 1 },
 };
+
+export const fadeOut = {
+	hidden: { opacity: 1 },
+	visible: { opacity: 0, transition: { duration: 2 } },
+};
