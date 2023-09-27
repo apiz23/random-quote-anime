@@ -9,6 +9,7 @@ export default {
 			fontFamily: {
 				pt: ['"PT Serif"', "serif"],
 				lobster: ['"Lobster Two"', "cursive"],
+				inter: ['"Inter"', "sans-serif"],
 			},
 			animation: {
 				text: "text 5s ease infinite",

@@ -34,7 +34,7 @@ export default function App() {
 						<div className="grid grid-cols-1 p-5 m-5 bg-gray-300 border border-gray-200 rounded-lg shadow-xl dark:border-gray-700 text-sm md:text-xl dark:bg-gray-800 min-h-max w-[300px] md:w-[600px]">
 							{currentQuote && (
 								<div key={currentQuote.quote}>
-									<h2 className="text-center font-lobster">
+									<h2 className="text-center font-inter">
 										{"< "}
 										{currentQuote.quote}
 										{" />"}
