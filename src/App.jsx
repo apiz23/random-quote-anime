@@ -8,7 +8,7 @@ export default function App() {
 
 	useEffect(() => {
 		axios
-			.get("http://localhost:5175/quotes")
+			.get("https://random-quote-anime.vercel.app/")
 			.then((response) => {
 				setData(response.data);
 				setCurrentQuote(response.data[Math.floor(Math.random() * 10) + 1]);
@@ -58,10 +58,7 @@ export default function App() {
 						</button>
 					</div>
 					<div className="grid shadow-sm justify-center p-3">
-						<a
-							href="https://github.com/apiz23"
-							target="_blank"
-						>
+						<a href="https://github.com/apiz23" target="_blank">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								x="0px"

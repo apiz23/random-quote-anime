@@ -9,7 +9,7 @@
 		"build": "vite build",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
-		"dev:api": "json-server --watch data.json --port 5175"
+		"dev:api": "json-server https://random-quote-anime.vercel.app/"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.4.2",
