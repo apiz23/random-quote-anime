@@ -8,7 +8,7 @@ export default function App() {
 
 	useEffect(() => {
 		axios
-			.get("https://random-quote-anime.vercel.app/")
+			.get("https://anime-quotes-1mxl.onrender.com/quotes")
 			.then((response) => {
 				setData(response.data);
 				setCurrentQuote(response.data[Math.floor(Math.random() * 10) + 1]);
