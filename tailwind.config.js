@@ -10,6 +10,7 @@ export default {
 				pt: ['"PT Serif"', "serif"],
 				lobster: ['"Lobster Two"', "cursive"],
 				inter: ['"Inter"', "sans-serif"],
+				fugaz: ['"Fugaz One"', "cursive"],
 			},
 			animation: {
 				text: "text 5s ease infinite",
