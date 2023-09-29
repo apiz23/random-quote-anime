@@ -3,8 +3,9 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import Loading from "./Components/Loading";
 import Footer from "./Components/Footer";
+import { Link } from "react-router-dom";
 
-export default function App() {
+export default function Home() {
 	const [data, setData] = useState([]);
 	const [currentQuote, setCurrentQuote] = useState(null);
 	const [loading, setLoading] = useState(true);
@@ -18,6 +19,7 @@ export default function App() {
 				setTimeout(() => {
 					setLoading(false);
 				}, 1500);
+				sessionStorage.clear();
 			})
 			.catch((error) => {
 				console.error("Error fetching data:", error);
@@ -57,7 +59,7 @@ export default function App() {
 						</p>
 					</div>
 					<Footer />
-					<div className="text-center">
+					<div className="flex items-align justify-center">
 						<button
 							onClick={getRandomQuote}
 							type="button"
@@ -65,6 +67,27 @@ export default function App() {
 						>
 							Next Quotes
 						</button>
+						<Link to="/signIn">
+							<button
+								type="button"
+								class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									class="w-6 h-6"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+									/>
+								</svg>
+							</button>
+						</Link>
 					</div>
 				</div>
 			) : null}

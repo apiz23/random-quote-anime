@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:wght@300&family=Lobster+Two&family=PT+Serif&display=swap');
 
 body {
-	background: linear-gradient(-45deg, #000000, #90abcc , #071e3c);
+	background: linear-gradient(-45deg, #000000, #6f839b , #071e3c);
 	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+	animation: gradient 10s ease infinite;
 	height: 100vh;
 }
 
