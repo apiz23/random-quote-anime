@@ -12,6 +12,7 @@ import {
 import { BorderBeam } from "@/components/magicui/border-beam";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { motion } from "framer-motion";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Quote {
 	id: number;
@@ -57,7 +58,7 @@ export default function Page() {
 
 	const handleClick = () => {
 		setLoading(true);
-		setTimeout(fetchQuote, 1000);
+		setTimeout(fetchQuote, 500);
 	};
 
 	useEffect(() => {
@@ -69,29 +70,47 @@ export default function Page() {
 			<div className="relative z-10 rounded-xl px-5 md:px-0 max-w-4xl grid grid-cols-2 md:grid-cols-10 mx-auto py-10">
 				<BorderBeam size={700} duration={5} delay={9} />
 				{loading ? (
-					<div className="col-span-10 flex items-center justify-center">
-						<Card className="text-white bg-transparent border-none text-center h-[300px] pt-14">
-							<CardHeader>
-								<CardTitle className="text-2xl md:text-5xl tracking-wider">
-									Loading...
-								</CardTitle>
-							</CardHeader>
-							<CardContent>
-								<p>Please wait while we fetch a random quote.</p>
-							</CardContent>
-						</Card>
-					</div>
+					<>
+						<div className="col-span-4">
+							<Skeleton className="h-full w-3/5 md:h-[300px] md:w-[300px] rounded-lg mx-auto" />
+						</div>
+						<div className="col-span-6">
+							<Card className="md:h-[300px] text-white bg-transparent border-none text-justify">
+								<CardHeader>
+									<CardTitle className="text-2xl md:text-5xl tracking-wider">
+										<Skeleton className="h-12 w-4/5" />
+									</CardTitle>
+									<CardDescription className="text-neutral-500">
+										<Skeleton className="h-4 w-3/5" />
+									</CardDescription>
+								</CardHeader>
+								<CardContent>
+									<Skeleton className="h-4" />
+								</CardContent>
+								<CardFooter className="flex justify-end">
+									<Skeleton className="h-4 w-3/5" />
+								</CardFooter>
+							</Card>
+						</div>
+					</>
 				) : error ? (
 					<div className="col-span-10 flex items-center justify-center">
-						<Card className="text-white bg-transparent border-none text-center h-[300px] pt-14">
+						<Skeleton className="h-12 w-12 rounded-full" />
+						<Card className="md:h-[300px] text-white bg-transparent border-none text-justify">
 							<CardHeader>
 								<CardTitle className="text-2xl md:text-5xl tracking-wider">
-									Error
+									<Skeleton className="h-7 w-4/5" />
 								</CardTitle>
+								<CardDescription className="text-neutral-500">
+									<Skeleton className="h-4 w-3/5" />
+								</CardDescription>
 							</CardHeader>
 							<CardContent>
-								<p>{error}</p>
+								<Skeleton className="h-4" />
 							</CardContent>
+							<CardFooter className="flex justify-end">
+								<Skeleton className="h-4 w-3/5" />
+							</CardFooter>
 						</Card>
 					</div>
 				) : (

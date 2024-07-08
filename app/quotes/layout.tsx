@@ -9,6 +9,9 @@ export default function QuoteLayout({
 }>) {
 	return (
 		<>
+			<head>
+				<link rel="icon" href="/logo.jpg" />
+			</head>
 			<div className="min-h-screen bg-black pt-5 md:pt-0 px-5 overflow-hidden md:pb-0 pb-20">
 				<Spotlight className="left-0 md:left-60 -top-20" fill="white" />
 				<div className="max-w-7xl mx-auto py-14 md:py-24 md:px-10 shadow-xl">
