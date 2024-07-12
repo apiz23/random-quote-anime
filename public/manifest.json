@@ -1,6 +1,6 @@
 {
-	"name": "PWA App",
-	"short_name": "App",
+	"name": "Random Quote Anime",
+	"short_name": "RAO",
 	"theme_color": "#FFFFFF",
 	"background_color": "#FFFFFF",
 	"start_url": "/",
